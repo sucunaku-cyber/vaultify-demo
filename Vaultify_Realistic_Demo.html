@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vaultify Realistic Demo</title>
+<style>
+body{margin:0;background:#061b5c;font-family:Inter,Arial,sans-serif;display:flex;justify-content:center;padding:20px}
+.phone{width:400px;height:860px;background:#f6f8ff;border-radius:40px;overflow:hidden;position:relative;box-shadow:0 25px 70px rgba(0,0,0,.45)}
+.screen{display:none;height:100%;overflow:auto;padding-bottom:90px}.active{display:block}
+.header{background:linear-gradient(135deg,#062A78,#2d63ff);color:#fff;padding:20px}
+.balance{background:rgba(255,255,255,.15);padding:16px;border-radius:18px}
+.card{background:#fff;margin:12px;padding:14px;border-radius:18px;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.ai{background:linear-gradient(135deg,#062A78,#2d63ff);color:#fff}
+.row{display:flex;gap:10px}
+.small{flex:1;text-align:center}
+.nav{position:absolute;bottom:0;left:0;right:0;background:#fff;display:flex;justify-content:space-around;padding:10px;border-top:1px solid #ddd}
+.nav button{background:none;border:none;color:#062A78;font-weight:700}
+.plus{width:50px;height:50px;border-radius:50%;background:#062A78!important;color:#fff!important}
+.progress{height:8px;background:#d9e3ff;border-radius:20px;margin-top:6px}.fill{height:8px;background:#2d63ff;border-radius:20px}
+.tx{display:flex;justify-content:space-between;padding:8px 0;border-bottom:1px solid #eee}
+.avatar{width:70px;height:70px;border-radius:50%;background:#cfd8ff;display:flex;align-items:center;justify-content:center;font-size:28px;margin:auto}
+</style>
+<script>
+function show(id){document.querySelectorAll('.screen').forEach(s=>s.classList.remove('active'));document.getElementById(id).classList.add('active');}
+</script>
+</head>
+<body>
+<div class="phone">
+
+<div id="home" class="screen active">
+<div class="header">
+<b>Vaultify</b><br><br>
+Good morning, Eliesa 👋
+<div class="balance">
+<div>Total Balance</div>
+<h1>€2,450.75</h1>
+<small>▲ 12.5% from last month</small>
+</div>
+</div>
+
+<div class="card ai">
+🤖 <b>Vaultify Coach</b><br><br>
+You spent 15% less on food this month. Keep this pace and you'll save €208.
+</div>
+
+<div class="row">
+<div class="card small"><b>82</b><br>Score</div>
+<div class="card small"><b>14🔥</b><br>Streak</div>
+</div>
+
+<div class="card">
+<b>🎯 New Laptop</b>
+<div class="progress"><div class="fill" style="width:54%"></div></div>
+54%
+</div>
+
+<div class="card">
+<b>Recent Transactions</b>
+<div class="tx"><span>Spotify</span><span>-€4.99</span></div>
+<div class="tx"><span>Coffee</span><span>-€3.50</span></div>
+<div class="tx"><span>Salary</span><span>+€850</span></div>
+</div>
+</div>
+
+<div id="expenses" class="screen">
+<div class="header"><h2>Expenses</h2></div>
+<div class="card">🏠 Housing €568 (40%)</div>
+<div class="card">🛒 Food €355 (25%)</div>
+<div class="card">🚗 Transport €213 (15%)</div>
+<div class="card">🎬 Entertainment €142 (10%)</div>
+</div>
+
+<div id="goals" class="screen">
+<div class="header"><h2>Savings Goals</h2></div>
+<div class="card">💻 New Laptop — 54%</div>
+<div class="card">🛡 Emergency Fund — 32%</div>
+<div class="card">🏖 Summer Vacation — 68%</div>
+<div class="card">🎓 Master's Degree Fund — 21%</div>
+</div>
+
+<div id="notifications" class="screen">
+<div class="header"><h2>Notifications</h2></div>
+<div class="card">🔔 Netflix payment due tomorrow</div>
+<div class="card">🎉 You've reached 50% of your laptop goal</div>
+<div class="card">🔥 14-day saving streak achieved</div>
+</div>
+
+<div id="profile" class="screen">
+<div class="header"><h2>Profile</h2></div>
+<div class="card" style="text-align:center">
+<div class="avatar">👩</div>
+<h3>Eliesa Plakolli</h3>
+⭐ Premium Member
+</div>
+
+<div class="row">
+<div class="card small"><b>82/100</b><br>Score</div>
+<div class="card small"><b>7</b><br>Goals</div>
+<div class="card small"><b>€4,320</b><br>Saved</div>
+</div>
+
+<div class="card">
+🏆 Achievements<br><br>
+• First €1,000 Saved<br>
+• 14-Day Savings Streak<br>
+• Goal Crusher Badge
+</div>
+
+<div class="card">
+⚙️ Settings<br><br>
+Notifications<br>
+Security<br>
+Linked Accounts<br>
+Subscription Management
+</div>
+</div>
+
+<div class="nav">
+<button onclick="show('home')">Home</button>
+<button onclick="show('expenses')">Expenses</button>
+<button class="plus">+</button>
+<button onclick="show('goals')">Goals</button>
+<button onclick="show('notifications')">Alerts</button>
+<button onclick="show('profile')">Profile</button>
+</div>
+
+</div>
+</body>
+</html>
